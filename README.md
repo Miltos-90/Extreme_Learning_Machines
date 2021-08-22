@@ -51,7 +51,7 @@ by switching to software OpenGL. For more information, click here. hold
 on plot(x, ySinc, 'k', 'linewidth', 3, 'displayname', 'sinC')
 xlabel('x') ylabel('y') title('sinC function') legend
 
-![](/ELM_images/figure_0.eps)
+![img](./ELM_images/figure_0.eps)
 
 We'll use 70% of the data, chosen randomly, as the training set, to
 which we'll add noise, and the rest 30% noise-free data will be used as
