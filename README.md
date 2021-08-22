@@ -65,7 +65,7 @@ setdiff(1:noSamples, idxTrain);
 xTrain = x(idxTrain); yTrain = y(idxTrain); xTest = x(idxTest); yTest =
 ySinc(idxTest);
 
-### **Training Algorithm** {#training-algorithm .unnumbered}
+### Training Algorithm
 
 The training algorithm consists of 3, rather simple steps, as discussed
 in the following.
@@ -76,15 +76,13 @@ Ntilde = 30; N = size(yTrain, 1); n = size(xTrain, 2); m = size(yTrain,
 2);
 
 
-#### **Step 1: Randomly assign input weight vector** ${\mathit{\mathbf{w}}}_i ={\left\lbrack w_{\textrm{i1}} ,w_{\textrm{i2}} ,\ldotp \ldotp \ldotp ,w_{\textrm{in}} \right\rbrack }^T \in \Re^n$ **and bias** ${\mathit{\mathbf{b}}}_i ={\left\lbrack b_{\textrm{i1}} ,b_{\textrm{i2}} ,\ldotp \ldotp \ldotp ,b_{\textrm{im}} \right\rbrack }^T \in \Re^m ,i=1,\cdots ,N$ {#step-1-randomly-assign-input-weight-vector-mathitmathbfw_i-leftlbrack-w_textrmi1-w_textrmi2-ldotp-ldotp-ldotp-w_textrmin-rightrbrack-t-in-ren-and-bias-mathitmathbfb_i-leftlbrack-b_textrmi1-b_textrmi2-ldotp-ldotp-ldotp-b_textrmim-rightrbrack-t-in-rem-i1cdots-n .unnumbered}
+#### Step 1: Randomly assign input weight vector
+${\mathit{\mathbf{w}}}_i ={\left\lbrack w_{\textrm{i1}} ,w_{\textrm{i2}} ,\ldotp \ldotp \ldotp ,w_{\textrm{in}} \right\rbrack }^T \in \Re^n$ **and bias** ${\mathit{\mathbf{b}}}_i ={\left\lbrack b_{\textrm{i1}} ,b_{\textrm{i2}} ,\ldotp \ldotp \ldotp ,b_{\textrm{im}} \right\rbrack }^T \in \Re^m ,i=1,\cdots ,N$ {#step-1-randomly-assign-input-weight-vector-mathitmathbfw_i-leftlbrack-w_textrmi1-w_textrmi2-ldotp-ldotp-ldotp-w_textrmin-rightrbrack-t-in-ren-and-bias-mathitmathbfb_i-leftlbrack-b_textrmi1-b_textrmi2-ldotp-ldotp-ldotp-b_textrmim-rightrbrack-t-in-rem-i1cdots-n .unnumbered}
 
 w = rand(\[n, Ntilde\]); b = rand(\[m, Ntilde\]);
 
-[\[H_AF88CEAB\]]{#H_AF88CEAB label="H_AF88CEAB"}
 
-\>0
-
-#### **Step 2: Compute the hidden layer output matrix H** {#step-2-compute-the-hidden-layer-output-matrix-h .unnumbered}
+#### Step 2: Compute the hidden layer output matrix H
 
 $$\mathit{\mathbf{H}}\left(w_1 ,\ldotp \ldotp \ldotp ,w_{\tilde{N} } ,b_1 ,\ldotp \ldotp \ldotp ,b_{\tilde{N} } ,x_1 ,\ldotp \ldotp \ldotp ,x_N \right)={\left\lbrack \begin{array}{ccc}
 g\left(w_{1\;} x_1 +b_1 \right) & \cdots  & g\left(w_{\tilde{N} } x_1 +b_{\tilde{N} } \right)\\
