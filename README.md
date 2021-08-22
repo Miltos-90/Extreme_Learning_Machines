@@ -27,11 +27,6 @@ At first, let's generate a dummy dataset, to illustrate the training and
 prediction process. We will use the same example as in the reference in
 the beginning, i.e. we will approximate the 'sinC' function:
 
-<img src="https://render.githubusercontent.com/render/math?math=y\left(x\right)=\left\lbrace \begin{array}{ll}
-\frac{\sin \left(x\right)}{x} & x\not= 0\\
-1 & x=0
-\end{array}\right.">
-
 $y\left(x\right)=\left\lbrace \begin{array}{ll}
 \frac{\sin \left(x\right)}{x} & x\not= 0\\
 1 & x=0
@@ -56,7 +51,7 @@ by switching to software OpenGL. For more information, click here. hold
 on plot(x, ySinc, 'k', 'linewidth', 3, 'displayname', 'sinC')
 xlabel('x') ylabel('y') title('sinC function') legend
 
-![image](figure_0.eps){width="\\ifdim\\linewidth>56.196688409433015em 56.196688409433015em\\else\\linewidth\\fi"}
+![image](/ELM_images/figure_0.eps){width="\\ifdim\\linewidth>56.196688409433015em 56.196688409433015em\\else\\linewidth\\fi"}
 
 We'll use 70% of the data, chosen randomly, as the training set, to
 which we'll add noise, and the rest 30% noise-free data will be used as
@@ -70,10 +65,6 @@ setdiff(1:noSamples, idxTrain);
 xTrain = x(idxTrain); yTrain = y(idxTrain); xTest = x(idxTest); yTest =
 ySinc(idxTest);
 
-[\[H_087BF587\]]{#H_087BF587 label="H_087BF587"}
-
-\>0
-
 ### **Training Algorithm** {#training-algorithm .unnumbered}
 
 The training algorithm consists of 3, rather simple steps, as discussed
@@ -84,9 +75,6 @@ At first, let's define some necessary constants:
 Ntilde = 30; N = size(yTrain, 1); n = size(xTrain, 2); m = size(yTrain,
 2);
 
-[\[H_C64C237F\]]{#H_C64C237F label="H_C64C237F"}
-
-\>0
 
 #### **Step 1: Randomly assign input weight vector** ${\mathit{\mathbf{w}}}_i ={\left\lbrack w_{\textrm{i1}} ,w_{\textrm{i2}} ,\ldotp \ldotp \ldotp ,w_{\textrm{in}} \right\rbrack }^T \in \Re^n$ **and bias** ${\mathit{\mathbf{b}}}_i ={\left\lbrack b_{\textrm{i1}} ,b_{\textrm{i2}} ,\ldotp \ldotp \ldotp ,b_{\textrm{im}} \right\rbrack }^T \in \Re^m ,i=1,\cdots ,N$ {#step-1-randomly-assign-input-weight-vector-mathitmathbfw_i-leftlbrack-w_textrmi1-w_textrmi2-ldotp-ldotp-ldotp-w_textrmin-rightrbrack-t-in-ren-and-bias-mathitmathbfb_i-leftlbrack-b_textrmi1-b_textrmi2-ldotp-ldotp-ldotp-b_textrmim-rightrbrack-t-in-rem-i1cdots-n .unnumbered}
 
@@ -318,7 +306,7 @@ beta(:, i) = pseudoInv(H) \* y(:, i); end end
 
 \>0
 
-### Prediction {#prediction .unnumbered}
+### Prediction
 
 function yHat = predict(X, w, b, beta)
 
