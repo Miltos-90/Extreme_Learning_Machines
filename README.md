@@ -27,7 +27,10 @@ At first, let's generate a dummy dataset, to illustrate the training and
 prediction process. We will use the same example as in the reference in
 the beginning, i.e. we will approximate the 'sinC' function:
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+<img src="https://render.githubusercontent.com/render/math?math=y\left(x\right)=\left\lbrace \begin{array}{ll}
+\frac{\sin \left(x\right)}{x} & x\not= 0\\
+1 & x=0
+\end{array}\right.">
 
 $y\left(x\right)=\left\lbrace \begin{array}{ll}
 \frac{\sin \left(x\right)}{x} & x\not= 0\\
