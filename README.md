@@ -1,10 +1,6 @@
 # A Matlab implementation of "Extreme Learning Machine: Theory and Applications"
 
-[\[H_2A507836\]]{#H_2A507836 label="H_2A507836"}
-
-\>0
-
-Intro {#intro .unnumbered}
+Intro
 -----
 
 Let's have a look at Extreme Learning Machines with Matlab (to freshen
@@ -22,16 +18,10 @@ performance at extremely fast learning speeds. Here, we'll implement the
 training algorithm as presented in the above paper, and also try it on
 one of the referenced datasets, just to get familiar with the concept:
 
-[\[H_310AA39B\]]{#H_310AA39B label="H_310AA39B"}
-
-\>0
-
-Implementation {#H_A4165447 .unnumbered}
+Implementation
 --------------
 
-\>0
-
-### Dummy dataset {#dummy-dataset .unnumbered}
+### Dummy dataset
 
 At first, let's generate a dummy dataset, to illustrate the training and
 prediction process. We will use the same example as in the reference in
